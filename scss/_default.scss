@@ -1,6 +1,12 @@
 :root {
+  --background-color: white;
   --default-color: black;
   --hover-color: darkgoldenrod;
+  @media (prefers-color-scheme: dark) {
+    --background-color: black;
+    --default-color: white;
+    --hover-color: goldenrod;
+  }
 }
 
 html, body, div, span, h1, h2, h3, p, blockquote, pre,
@@ -18,3 +24,6 @@ html, body, div, span, h1, h2, h3, p, blockquote, pre,
   box-sizing: border-box;
 }
 
+body {
+  background-color: var(--background-color);
+}

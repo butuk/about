@@ -1,6 +1,15 @@
-const trainer = document.querySelector('.trainer');
-const trained = document.querySelector('.trained');
+const trainer: object | null = document.querySelector('.trainer');
+//const trained = document.querySelector('.trained');
+
+
 trainer.addEventListener('click', ()=> {
-    trainer.classList.add('hidden');
-    trained.classList.remove('hidden');
+
+})
+
+
+// Dynamic favicon
+const iconPlace = document.getElementById('favicon');
+document.body.addEventListener('click', () => {
+    let icon = Math.round(Math.random()*19)+1;
+    iconPlace.setAttribute(`href`, `icons/${icon}.png`)
 })
