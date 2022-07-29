@@ -1,0 +1,12 @@
+.container {
+  line-height: 6vmax;
+  margin: 5vmax 15vmax 20vmax 10vmax;
+  @media screen and (aspect-ratio: 1/1) {
+    margin: 5vmax 5vmax 10vmax 5vmax;
+    line-height: 7vmax;
+  }
+  @media screen and (orientation: portrait) {
+    margin: 5vmax 5vmax 10vmax 3vmax;
+    line-height: 8vmax;
+  }
+}

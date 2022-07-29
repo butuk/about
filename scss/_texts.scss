@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'Roboto Serif';
+  src: url('fonts/RobotoSerif-VariableFont_GRAD,opsz,wdth,wght.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto Flex';
+  src: url('fonts/RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf');
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('fonts/Quicksand-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto Mono';
+  src: url('fonts/RobotoMono-VariableFont_wght.ttf');
+}
+
+body {
+  font-size: 5vmax;
+  font-family: 'Roboto Flex', sans-serif;
+  font-variation-settings: 'wght' 400, 'wdth' 100;
+}
+
+abbr {
+  letter-spacing: .5vmax;
+}
+
+.headline {
+  font-variation-settings: 'wdth' 110, 'wght' 600, 'GRAD' 50;
+}

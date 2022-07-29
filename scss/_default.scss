@@ -1,0 +1,20 @@
+:root {
+  --default-color: black;
+  --hover-color: darkgoldenrod;
+}
+
+html, body, div, span, h1, h2, h3, p, blockquote, pre,
+{
+  color: var(--default-color);
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+* {
+  box-sizing: border-box;
+}
+
