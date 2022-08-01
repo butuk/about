@@ -28,6 +28,12 @@ abbr {
   letter-spacing: .5vmax;
 }
 
-.headline {
+.headline, .reset {
   font-variation-settings: 'wdth' 110, 'wght' 600, 'GRAD' 50;
+}
+
+.can-help, .graduated {
+  font-family: 'Roboto Serif', serif;
+  font-size: .9em;
+  font-variation-settings: 'wdth' 90, 'wght' 300;
 }
