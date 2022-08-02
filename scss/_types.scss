@@ -15,6 +15,14 @@ a {
   }
 }
 
+@keyframes expand{
+  from {
+    opacity: 0;
+    font-variation-settings: 'wdth' 0
+  }
+}
+
+
 .dashed {
   @include line (var(--default-color), 75%);
   &:hover {
@@ -22,7 +30,11 @@ a {
   }
 }
 
+
+
+
 .hidden {
+
   display: none;
 }
 
