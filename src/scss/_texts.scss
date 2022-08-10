@@ -1,22 +1,22 @@
 @font-face {
   font-family: 'Roboto Serif';
-  src: url('fonts/RobotoSerif-VariableFont_GRAD,opsz,wdth,wght.ttf');
+  src: url('../src/fonts/RobotoSerif-VariableFont_GRAD,opsz,wdth,wght.ttf');
 }
 
 @font-face {
   font-family: 'Roboto Flex';
-  src: url('fonts/RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf');
+  src: url('../src/fonts/RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf');
 }
 
-@font-face {
+/*@font-face {
   font-family: 'Quicksand';
-  src: url('fonts/Quicksand-VariableFont_wght.ttf');
+  src: url('../src/fonts/Quicksand-VariableFont_wght.ttf');
 }
 
 @font-face {
   font-family: 'Roboto Mono';
-  src: url('fonts/RobotoMono-VariableFont_wght.ttf');
-}
+  src: url('../src/fonts/RobotoMono-VariableFont_wght.ttf');
+}*/
 
 body {
   font-size: 5vmax;

@@ -1,3 +1,6 @@
+/*!**********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles.scss ***!
+  \**********************************************************************************************************/
 :root {
   --background-color: white;
   --default-color: black;
@@ -31,20 +34,21 @@ body {
 
 @font-face {
   font-family: "Roboto Serif";
-  src: url("fonts/RobotoSerif-VariableFont_GRAD,opsz,wdth,wght.ttf");
+  src: url(d3424d4e8363f72c4460.ttf);
 }
 @font-face {
   font-family: "Roboto Flex";
-  src: url("fonts/RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf");
+  src: url(b9992afc5719796de07e.ttf);
 }
+/*@font-face {
+  font-family: 'Quicksand';
+  src: url('../src/fonts/Quicksand-VariableFont_wght.ttf');
+}
+
 @font-face {
-  font-family: "Quicksand";
-  src: url("fonts/Quicksand-VariableFont_wght.ttf");
-}
-@font-face {
-  font-family: "Roboto Mono";
-  src: url("fonts/RobotoMono-VariableFont_wght.ttf");
-}
+  font-family: 'Roboto Mono';
+  src: url('../src/fonts/RobotoMono-VariableFont_wght.ttf');
+}*/
 body {
   font-size: 5vmax;
   font-family: "Roboto Flex", sans-serif;
@@ -84,7 +88,7 @@ a:hover {
 @keyframes expand {
   from {
     opacity: 0;
-    font-variation-settings: "wdth" 10;
+    font-variation-settings: "wdth" 0;
   }
 }
 .dashed {
@@ -138,5 +142,3 @@ a:hover {
   position: relative;
   left: -0.55em;
 }
-
-/*# sourceMappingURL=styles.css.map */
