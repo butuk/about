@@ -2,19 +2,24 @@ let MiniCssExtractPlugin = require("mini-css-extract-plugin");
 let path = require('path');
 
 let configuration = {
+ // watch: true,
   entry: "./src/scripts.ts",
   plugins: [new MiniCssExtractPlugin(
     {
       filename: "styles.css"
       }
   )],
+
   module: {
     rules: [
+
+      // SCSS
       {
         test: /\.s[ac]ss$/i,
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
-
       },
+
+      // Typescript
       {
         test: /\.tsx?$/,
         use: 'ts-loader',
@@ -22,8 +27,18 @@ let configuration = {
       },
 
 
+      // Images
+     /* {
+        test: /\.(png|jpe?g|gif)$/i,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+        },
+      },*/
+
     ]
   },
+
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
   },
@@ -33,14 +48,17 @@ let configuration = {
   },
 };
 
-//module.exports = configuration;
-
 module.exports = (env, options) => {
 
   let production = options.mode === 'production';
 
-  configuration.devtool = production
-                        ? "source-map"
-                        : "eval-source-map"
+  if (production) {
+    configuration.devtool = "source-map";
+    configuration.watch = false;
+  } else {
+    configuration.devtool = "eval-source-map";
+    configuration.watch = true;
+  }
+
   return configuration;
 }

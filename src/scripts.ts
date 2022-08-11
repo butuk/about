@@ -1,4 +1,5 @@
 import "./styles.scss";
+//import "./icons/icon_1.png";
 
 type Element = HTMLElement | null;
 
@@ -33,6 +34,7 @@ trainer.addEventListener('click', () => {
 // Dynamic favicon
 const iconPlace : HTMLElement | null = document.getElementById('favicon');
 document.body.addEventListener('click', () => {
+    console.log('Hi!');
     let icon : number = Math.round(Math.random() * 19) + 1;
     if (iconPlace) {
         iconPlace.setAttribute(`href`, `icons/${icon}.png`);
