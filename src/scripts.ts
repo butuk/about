@@ -1,5 +1,7 @@
-import "./styles.scss";
-//import "./icons/icon_1.png";
+import './styles.scss';
+
+// Old shit code
+/*import './ts/blocks';
 
 type Element = HTMLElement | null;
 
@@ -28,29 +30,6 @@ trainer.addEventListener('click', () => {
     })
 }
 
-
-//const clickable = document.querySelectorAll('.clickable');
-
-// Dynamic favicon
-const iconPlace : HTMLElement | null = document.getElementById('favicon');
-document.body.addEventListener('click', () => {
-    console.log('Hi!');
-    let icon : number = Math.round(Math.random() * 19) + 1;
-    if (iconPlace) {
-        iconPlace.setAttribute(`href`, `icons/${icon}.png`);
-    }
-});
-
-/*clickable.forEach(element => {
-    element.addEventListener('click', () => {
-        reset.classList.remove('hidden');
-        headline.classList.add('hidden');
-        element.nextElementSibling.classList.remove('hidden');
-        element.classList.add('hidden');
-    });
-});*/
-
-
 // Reset to default state
 if (reset) {
     reset.addEventListener('click', () => {
@@ -61,4 +40,14 @@ if (reset) {
         ux ? ux.classList.remove('hidden') : null;
         trainer ? trainer.classList.remove('hidden') : null;
     });
-}
+}*/
+
+
+// Dynamic favicon
+const iconPlace : HTMLElement | null = document.getElementById('favicon');
+document.body.addEventListener('click', () => {
+    let icon : number = Math.round(Math.random() * 19) + 1;
+    if (iconPlace) {
+        iconPlace.setAttribute(`href`, `icons/${icon}.png`);
+    }
+});

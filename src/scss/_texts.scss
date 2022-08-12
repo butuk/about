@@ -1,21 +1,21 @@
 @font-face {
   font-family: 'Roboto Serif';
-  src: url('../src/fonts/RobotoSerif-VariableFont_GRAD,opsz,wdth,wght.ttf');
+  src: url('../fonts/RobotoSerif-VariableFont_GRAD,opsz,wdth,wght.ttf');
 }
 
 @font-face {
   font-family: 'Roboto Flex';
-  src: url('../src/fonts/RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf');
+  src: url('../fonts/RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf');
 }
 
 /*@font-face {
   font-family: 'Quicksand';
-  src: url('../src/fonts/Quicksand-VariableFont_wght.ttf');
+  src: url('../fonts/Quicksand-VariableFont_wght.ttf');
 }
 
 @font-face {
   font-family: 'Roboto Mono';
-  src: url('../src/fonts/RobotoMono-VariableFont_wght.ttf');
+  src: url('../fonts/RobotoMono-VariableFont_wght.ttf');
 }*/
 
 body {
@@ -30,10 +30,4 @@ abbr {
 
 .headline, .reset {
   font-variation-settings: 'wdth' 110, 'wght' 600, 'GRAD' 50;
-}
-
-.can-help, .graduated {
-  font-family: 'Roboto Serif', serif;
-  font-size: .9em;
-  font-variation-settings: 'wdth' 90, 'wght' 300;
 }

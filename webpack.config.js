@@ -2,13 +2,8 @@ let MiniCssExtractPlugin = require("mini-css-extract-plugin");
 let path = require('path');
 
 let configuration = {
- // watch: true,
   entry: "./src/scripts.ts",
-  plugins: [new MiniCssExtractPlugin(
-    {
-      filename: "styles.css"
-      }
-  )],
+  plugins: [new MiniCssExtractPlugin({filename: "styles.css"})],
 
   module: {
     rules: [
@@ -25,7 +20,6 @@ let configuration = {
         use: 'ts-loader',
         exclude: /node_modules/,
       },
-
 
       // Images
      /* {
@@ -50,10 +44,10 @@ let configuration = {
 
 module.exports = (env, options) => {
 
-  let production = options.mode === 'production';
+  let isProd = options.mode === 'production';
 
-  if (production) {
-    configuration.devtool = "source-map";
+  if (isProd) {
+    configuration.devtool = false;
     configuration.watch = false;
   } else {
     configuration.devtool = "eval-source-map";
