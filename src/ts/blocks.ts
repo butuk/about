@@ -1,16 +1,21 @@
+import {Block} from "./block";
 
-/*--Content--------------------------------
+const trained =
+    'as trained 19 newbie designers in 2021.'
 
-    headline: 'Vitali Yanusheuski',
+const trainer = [
+    'Also can help with training designers',
+    ' ',
+    ['from scratch', trained],
+];
 
-    ux : '<abbr>UX/UI/</abbr>Info-designer.',
+const can_help =
+    'Can help with web-related design tasks and data visualization. ';
 
-    can_help : 'Can help with web-related design tasks and data visualization.',
+const start = [
+    ['UX/UI/Info-designer.', can_help],
+    ' ',
+    ['Design trainer.', trainer],
+];
 
-    trainer : 'Design trainer.',
-
-    can_teach : 'Also can help with training designers from scratch.',
-
-    email: 'bootook@gmail.com',
-
-*/
+new Block(start, document.querySelector('.content'));
