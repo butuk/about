@@ -1,20 +1,26 @@
-const trained : string =
-    'as trained 19 newbie designers in 2021'
+const trained : object =
+    [
+        'as trained 19 newbie ',
+        ['image', 'icons/15.png'],
+        ' designers in 2021',
+    ];
 
 const trainer : object =
     [
         'Also can help with training designers',
         ' ',
-        ['from scratch', 'link', trained],
+        ['link', 'from scratch', trained],
     ];
 
-const can_help : string =
-    'Can help with web-related design tasks and data visualization';
+const can_help : object =
+    [
+        'Can help with web-related design tasks and data visualization',
+    ];
 
 export const start : object =
     [
-        ['UX/UI/Info-designer','link', can_help],
+        ['link', 'UX/UI/Info-designer', can_help],
         '. ',
-        ['Design trainer','link', trainer],
+        ['link', 'Design trainer', trainer],
         '.',
     ];
