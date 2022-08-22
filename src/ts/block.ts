@@ -19,7 +19,6 @@ export class Block {
                 img.setAttribute('src', element[1]);
                 block.appendChild(img)
                 place ? place.appendChild(block) : null;
-                console.log(block);
 
             } else if(typeof element === 'object' && element[0] === 'link') {
                 const link: HTMLElement = document.createElement('a');
