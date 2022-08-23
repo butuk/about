@@ -1,17 +1,17 @@
 .container {
-  position: fixed;
+  position: relative;
   top: 5vmax;
   left: 10vmax;
-  margin-right: 15vmax;
+  margin-right: 25vmax;
   line-height: 6vmax;
   @media screen and (aspect-ratio: 1/1) {
     left: 5vmax;
-    margin-right: 5vmax;
+    margin-right: 7vmax;
     line-height: 7vmax;
   }
   @media screen and (orientation: portrait) {
-    left: 3vmax;
-    margin-right: 5vmax;
+    left: 4vmax;
+    margin-right: 8vmax;
     line-height: 8vmax;
   }
 }

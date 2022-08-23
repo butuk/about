@@ -50,6 +50,7 @@ export class Block {
                 }
             }
             const spaceForNewBlock = place ? place.appendChild(block) : null;
+
         })
     }
 }
