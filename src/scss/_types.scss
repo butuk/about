@@ -8,6 +8,7 @@
 a {
   text-decoration: none;
   color: var(--default-color);
+  cursor: pointer;
   @include line (var(--default-color), 100%);
   &:hover {
     color: var(--hover-color);
@@ -15,27 +16,11 @@ a {
   }
 }
 
-@keyframes expand{
-  from {
-    opacity: 0;
-    font-variation-settings: 'wdth' 0
-  }
-}
-
-
 .dashed {
   @include line (var(--default-color), 75%);
   &:hover {
     @include line (var(--hover-color), 75%);
   }
-}
-
-
-
-
-.hidden {
-
-  display: none;
 }
 
 .clickable {

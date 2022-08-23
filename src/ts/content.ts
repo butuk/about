@@ -1,15 +1,10 @@
-const trained : object =
-    [
-        'as trained 19 newbie ',
-        ['image', 'icons/15.png'],
-        ' designers in 2021',
-    ];
+//Place blocks from bottom to top
 
 const trainer : object =
     [
         'Also can help with training designers',
         ' ',
-        ['link', 'from scratch', trained],
+        'from scratch',
     ];
 
 const can_help : object =
@@ -19,8 +14,8 @@ const can_help : object =
 
 export const start : object =
     [
-        ['link', 'UX/UI/Info-designer', can_help],
+        ['UX/UI/Info-designer', can_help],
         '. ',
-        ['link', 'Design trainer', trainer],
+        ['Design trainer', trainer],
         '.',
     ];

@@ -1,9 +1,10 @@
 import {setReset} from "./reset";
+import {createViz} from "./visualizations";
 
 export class Block {
     public content: string | object;
 
-    constructor(content: any, place: HTMLElement | null) {
+    constructor(content: object, place: HTMLElement | null) {
         this.content = content;
 
         Array.prototype.forEach.call(this.content, element => {
@@ -11,30 +12,44 @@ export class Block {
             block.style.display = 'inline';
 
             if(typeof element === 'string') {
-                block.innerHTML = element;
-                place ? place.appendChild(block) : null;
+                block.textContent = element;
 
-            } else if (typeof element === 'object' && element[0] === 'image') {
-                const img: HTMLElement = document.createElement('img');
-                img.setAttribute('src', element[1]);
-                block.appendChild(img)
-                place ? place.appendChild(block) : null;
+            } else if (typeof element === 'object') {
+                switch (element[0]) {
+                    case 'image':
+                        const img: HTMLElement = document.createElement('img');
+                        img.setAttribute('src', element[1]);
+                        block.appendChild(img)
+                        break;
 
-            } else if(typeof element === 'object' && element[0] === 'link') {
-                const link: HTMLElement = document.createElement('a');
-                link.innerHTML = element[1];
-                link.classList.add('clickable');
-                link.classList.add('dashed');
-                block.appendChild(link);
+                    case 'html':
+                        const code: HTMLElement = document.createElement('div');
+                        code.innerHTML = element[1];
+                        block.appendChild(code);
+                        break;
 
-                const spaceForNewBlock = place ? place.appendChild(block) : null;
+                    case 'd3':
+                        block.setAttribute('id', 'viz');
+                        place ? place.appendChild(block) : null;
+                        createViz(element[1]);
+                        break;
 
-                link.addEventListener('click', () => {
-                    spaceForNewBlock? new Block(element[2], spaceForNewBlock) : null;
-                    spaceForNewBlock ? spaceForNewBlock.removeChild(link) : null;
-                    setReset();
-                })
+                    //Link to new block (the first element - text of the link, second – block)
+                    default:
+                        const link: HTMLElement = document.createElement('a');
+                        link.textContent = element[0];
+                        link.classList.add('clickable');
+                        link.classList.add('dashed');
+                        block.appendChild(link);
+
+                        link.addEventListener('click', () => {
+                            spaceForNewBlock ? new Block(element[1], spaceForNewBlock) : null;
+                            spaceForNewBlock ? spaceForNewBlock.removeChild(link) : null;
+                            setReset();
+                        })
+                }
             }
+            const spaceForNewBlock = place ? place.appendChild(block) : null;
         })
     }
 }
