@@ -1,9 +1,15 @@
-//Place blocks from bottom to top
+
+/*
+Place blocks from bottom to top
+Names of visualizations can be found in visualizations.ts
+*/
+
 
 const trainer : object =
     [
         'Also can help with training designers',
         ' ',
+        //['d3', 'circlesViz'],
         'from scratch',
     ];
 
@@ -14,6 +20,7 @@ const can_help : object =
 
 export const start : object =
     [
+
         ['UX/UI/Info-designer', can_help],
         '. ',
         ['Design trainer', trainer],

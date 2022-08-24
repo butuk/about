@@ -1,0 +1,18 @@
+#viz {
+  width: 100%;
+}
+
+.svg-container{
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  //padding-bottom: 100%; /* to make aspect ratio 1/1 */
+  vertical-align: top;
+}
+
+.svg-content {
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 0;
+}

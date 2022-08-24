@@ -30,6 +30,7 @@ export class Block {
 
                     case 'd3':
                         block.setAttribute('id', 'viz');
+                        block.style.display = 'block';
                         place ? place.appendChild(block) : null;
                         createViz(element[1]);
                         break;
