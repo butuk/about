@@ -1,18 +1,13 @@
-#viz {
-  width: 100%;
-}
 
-.svg-container{
+@mixin container($width){
   display: inline-block;
   position: relative;
-  width: 100%;
-  //padding-bottom: 100%; /* to make aspect ratio 1/1 */
   vertical-align: top;
+  width: $width;
 }
 
-.svg-content {
-  display: inline-block;
-  position: absolute;
-  top: 10px;
-  left: 0;
+.svg-container {
+  @include container(100%);
 }
+
+//padding-bottom: 100%; /* to make aspect ratio 1/1 */

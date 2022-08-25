@@ -12,6 +12,7 @@ a {
   @include line (var(--default-color), 100%);
   &:hover {
     color: var(--hover-color);
+
     @include line (var(--hover-color), 100%);
   }
 }

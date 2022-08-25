@@ -1,28 +1,28 @@
 import {initiateStart} from "./start";
 
-const headline : HTMLElement | null = document.querySelector('.headline');
+const headline = <HTMLElement>document.querySelector('.headline');
 
 // Headline look
 export function setHeadline() {
-    if (headline ? (headline.textContent ? headline.textContent.charAt(0) === '>' : null) : null) {
-        headline ? (headline.textContent = headline.textContent ? headline.textContent.slice(1, headline.textContent.length - 1) : null) : null;
+    if (headline.textContent ? headline.textContent.charAt(0) === '>' : null) {
+        headline.textContent = headline.textContent ? headline.textContent.slice(1, headline.textContent.length - 1) : null;
     }
-    headline ? headline.classList.remove('reset', 'clickable') : null;
+    headline.classList.remove('reset', 'clickable');
 }
 
 export function setReset() {
-    if (headline ? (headline.textContent ? headline.textContent.charAt(0) !== '>' : null) : null) {
-        headline ? headline.innerHTML = '>' + headline.innerHTML + '<' : null;
+    if (headline.textContent ? headline.textContent.charAt(0) !== '>' : null) {
+        headline.innerHTML = '>' + headline.innerHTML + '<';
     }
-    headline ? headline.classList.add('reset', 'clickable') : null;
+    headline.classList.add('reset', 'clickable');
 }
 
 // Content reset
-headline ? headline.addEventListener('click', () => {
-    const place : HTMLObjectElement | null = document.querySelector('.content');
-    place? place.querySelectorAll('div').forEach(element => {
+headline.addEventListener('click', () => {
+    const place= <HTMLObjectElement>document.querySelector('.content');
+    place.querySelectorAll('div').forEach(element => {
         element.remove();
-    }) : null;
+    });
     setHeadline();
     initiateStart();
-}) : null;
+});

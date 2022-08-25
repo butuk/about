@@ -30,8 +30,19 @@ export class Block {
 
                     case 'd3':
                         block.setAttribute('id', 'viz');
-                        block.style.display = 'block';
+/*
+
+                        const container : HTMLElement = document.createElement('div');
+                        container.classList.add('svg-container');
+                        const svg : HTMLElement = document.createElement('svg');
+                        svg.classList.add('svg-content');
+                        svg.setAttribute('preserveAspectRatio', 'xMinYMin meet');
+                        block.append(container);
+                        container.append(svg);
+
+*/
                         place ? place.appendChild(block) : null;
+
                         createViz(element[1]);
                         break;
 
