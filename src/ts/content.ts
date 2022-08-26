@@ -6,6 +6,7 @@ Names of visualizations can be found in visualizations.ts
 
 const experience : object =
     [
+        'Worked as designer in various agencies, design studios and product companies',
         ['d3', 'experience'],
     ]
 
@@ -23,7 +24,7 @@ const can_help : object =
 
 export const start : object =
     [
-        ['UX/UI/Info-designer', can_help],
+        ['UX/UI/info-designer', can_help],
         '. ',
         ['Design trainer', trainer],
         '.',
