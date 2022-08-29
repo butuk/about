@@ -24,6 +24,8 @@ const can_help : object =
 
 export const start : object =
     [
+        /*['Experienced', experience],
+        ' ',*/
         ['UX/UI/info-designer', can_help],
         '. ',
         ['Design trainer', trainer],

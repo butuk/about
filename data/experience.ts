@@ -4,7 +4,8 @@ interface IWorkplace {
     type: string;
     start: number;
     end: number;
-    months: number
+    enter: number;
+    months: number;
 }
 
 export const dataset : IWorkplace[] = [
@@ -14,7 +15,8 @@ export const dataset : IWorkplace[] = [
         type: 'agency',
         start: 2006,
         end: 2012,
-        months: 74
+        enter: 0,
+        months: 74,
 
     },
     {
@@ -23,6 +25,7 @@ export const dataset : IWorkplace[] = [
         type: 'studio',
         start: 2012,
         end: 2013,
+        enter: 74,
         months:8,
     },
     {
@@ -31,6 +34,7 @@ export const dataset : IWorkplace[] = [
         type: 'product',
         start: 2013,
         end: 2013,
+        enter: 82,
         months: 10,
     },
     {
@@ -39,6 +43,7 @@ export const dataset : IWorkplace[] = [
         type: 'agency',
         start: 2013,
         end: 2015,
+        enter: 92,
         months: 17,
     },
     {
@@ -47,6 +52,7 @@ export const dataset : IWorkplace[] = [
         type: 'product',
         start: 2015,
         end: 2017,
+        enter: 109,
         months: 27,
     },
     {
@@ -55,6 +61,7 @@ export const dataset : IWorkplace[] = [
         type: 'studio',
         start: 2017,
         end: 2019,
+        enter: 136,
         months: 19,
     },
     {
@@ -63,6 +70,7 @@ export const dataset : IWorkplace[] = [
         type: 'product',
         start: 2019,
         end: 2022,
+        enter: 155,
         months: 42
     }
 ]
