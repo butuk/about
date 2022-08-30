@@ -6,8 +6,13 @@ Names of visualizations can be found in visualizations.ts
 
 const experience : object =
     [
-        'Worked as designer in various agencies, design studios and product companies',
+        'worked as designer in',
+        ['html', '&nbsp;'],
+        'various agencies, design studios and',
+        ['html', '&nbsp;'],
+        'product companies',
         ['d3', 'experience'],
+        'since 2006'
     ]
 
 const trainer : object =
@@ -19,14 +24,18 @@ const trainer : object =
 
 const can_help : object =
     [
-        'Can help with web-related design tasks and data visualization',
+        '-specialist ready to',
+        ['html', '&nbsp;'],
+        'help with web-related design tasks',
     ];
 
 export const start : object =
     [
-        /*['Experienced', experience],
-        ' ',*/
-        ['UX/UI/info-designer', can_help],
+        /*'Data visualizer',
+        ', ',*/
+        ['html', '<abbr>UX/UI</abbr>'],
+        ['-designer', can_help],
+        //['experienced UX/UI-designer', experience],
         '. ',
         ['Design trainer', trainer],
         '.',

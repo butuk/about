@@ -24,6 +24,7 @@ export class Block {
 
                     case 'html':
                         const code: HTMLElement = document.createElement('div');
+                        code.style.display = 'inline';
                         code.innerHTML = element[1];
                         block.appendChild(code);
                         break;
