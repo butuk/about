@@ -1,10 +1,16 @@
 :root {
   --background-color: white;
   --default-color: black;
+  --viz-color: black;
+  --agency-color: limegreen;
+  --studio-color: mediumblue;
+  --product-color: crimson;
   --hover-color: darkgoldenrod;
   @media (prefers-color-scheme: dark) {
+    --studio-color: blue;
     --background-color: black;
     --default-color: white;
+    --viz-color: white;
     --hover-color: goldenrod;
   }
 }

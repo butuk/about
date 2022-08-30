@@ -1,3 +1,6 @@
+@mixin text-decoration {
+  font-variation-settings: 'wght' 500, 'wdth' 95;
+}
 
 @mixin container($width){
   display: inline-block;
@@ -8,6 +11,25 @@
 
 .svg-container {
   @include container(100%);
+}
+
+.agency {
+  @include text-decoration;
+  color: var(--agency-color);
+}
+
+.studio {
+  @include text-decoration;
+  color: var(--studio-color);
+}
+
+.product {
+  @include text-decoration;
+  color: var(--product-color);
+}
+
+.viz-text {
+  color: var(--viz-color);
 }
 
 //padding-bottom: 100%; /* to make aspect ratio 1/1 */

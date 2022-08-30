@@ -10,25 +10,39 @@ export function createViz(functionName : any) {
 
 // My work experience visualization
 function experience() {
-            const SVG = {WIDTH: 400, HEIGHT: 20};
-            const MARGIN = {TOP: 0, RIGHT: 0, BOTTOM: 10, LEFT: 0}
+            const SVG = {
+                WIDTH: 400,
+                HEIGHT: 50
+            };
+            const MARGIN = {TOP: 10, RIGHT: 0, BOTTOM: 10, LEFT: 0}
             const VIZ = {WIDTH: (SVG.WIDTH - MARGIN.LEFT - MARGIN.RIGHT), HEIGHT: (SVG.HEIGHT - MARGIN.TOP - MARGIN.BOTTOM)};
             const THICKNESS = 15;
-            const COLOR = {AGENCY: 'green', STUDIO: 'blue', PRODUCT: 'red'}
+            const COLOR = {
+                AGENCY: 'limegreen',
+                STUDIO: 'mediumblue',
+                PRODUCT: 'crimson',
+            };
+            const TEXT  = {
+                COLOR: 'grey',
+                HEIGHT: 15,
+            };
 
-    // Scales
-            const monthsArr : number[] = [];
+    // Width and place scale
+            let monthsSum : number = 0;
+            const monthsArr : number[] | any[] = [];
             dataset.forEach(place => {
                 monthsArr.push(place.months);
+                monthsSum += place.months;
             })
-            const monthLength: number = VIZ.WIDTH/monthsArr.reduce((a, b) => a + b, 0);
-            const minLength = monthLength * min(monthsArr);
-            const maxLength = monthLength * max(monthsArr);
+            const oneMonth: number = VIZ.WIDTH/monthsSum;
+            const minBar = oneMonth * min(monthsArr);
+            const maxBar = oneMonth * max(monthsArr);
             const monthsDomain: number[] | any[] = extent(dataset, d => d.months);
-            const width = d3.scaleLinear()
+            const x = d3.scaleLinear()
                 .domain(monthsDomain)
-                .range([minLength, maxLength]);
+                .range([minBar, maxBar]);
 
+    //Color scale
             const types : string[] = [];
             dataset.forEach(place => {
                 types.push(place.type);
@@ -54,9 +68,35 @@ function experience() {
                 .data(dataset)
                 .enter()
                 .append('rect')
-                .attr('x', d => width(d.enter))
-                .attr('width', d => width(d.months))
+                .attr('x', d => x(d.enter))
+                .attr('width', d => x(d.months))
                 .attr('height', THICKNESS)
                 .attr('y', 0)
                 .attr('fill', d => color(d.type))
+
+
+    //Years labels
+            const startsArr : string[] | any[] = [];
+            dataset.forEach(place => {
+                startsArr.push(place.start);
+            })
+            const endsArr: string[] | any[]  = [];
+            dataset.forEach(place => {
+                endsArr.push(place.end);
+            });
+
+            group.append('text')
+                .attr('x', 0)
+                .attr('y', (THICKNESS + TEXT.HEIGHT))
+                .attr('font-size', TEXT.HEIGHT)
+                .text(`${startsArr[0]}`)
+                .attr('fill', TEXT.COLOR)
+
+            group.append('text')
+                .attr('x', VIZ.WIDTH)
+                .attr('y', (THICKNESS + TEXT.HEIGHT))
+                .attr('font-size', TEXT.HEIGHT)
+                .attr('text-anchor', 'end')
+                .text(`${endsArr[endsArr.length-1]}`)
+                .attr('fill', TEXT.COLOR)
 }
