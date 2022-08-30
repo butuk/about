@@ -1,5 +1,5 @@
-@mixin text-decoration {
-  font-variation-settings: 'wght' 500, 'wdth' 95;
+%text-decoration {
+  font-variation-settings: 'wght' 450, 'wdth' 95;
 }
 
 @mixin container($width){
@@ -14,17 +14,17 @@
 }
 
 .agency {
-  @include text-decoration;
+  @extend %text-decoration;
   color: var(--agency-color);
 }
 
 .studio {
-  @include text-decoration;
+  @extend %text-decoration;
   color: var(--studio-color);
 }
 
 .product {
-  @include text-decoration;
+  @extend %text-decoration;
   color: var(--product-color);
 }
 

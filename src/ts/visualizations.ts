@@ -12,11 +12,19 @@ export function createViz(functionName : any) {
 function experience() {
             const SVG = {
                 WIDTH: 400,
-                HEIGHT: 50
+                HEIGHT: 45,
             };
-            const MARGIN = {TOP: 10, RIGHT: 0, BOTTOM: 10, LEFT: 0}
-            const VIZ = {WIDTH: (SVG.WIDTH - MARGIN.LEFT - MARGIN.RIGHT), HEIGHT: (SVG.HEIGHT - MARGIN.TOP - MARGIN.BOTTOM)};
-            const THICKNESS = 15;
+            const MARGIN = {
+                TOP: 20,
+                RIGHT: 0,
+                BOTTOM: 0,
+                LEFT: 0,
+            }
+            const VIZ = {
+                WIDTH: (SVG.WIDTH - MARGIN.LEFT - MARGIN.RIGHT),
+                HEIGHT: (SVG.HEIGHT - MARGIN.TOP - MARGIN.BOTTOM),
+            };
+            const THICKNESS = 10;
             const COLOR = {
                 AGENCY: 'limegreen',
                 STUDIO: 'mediumblue',
@@ -24,7 +32,7 @@ function experience() {
             };
             const TEXT  = {
                 COLOR: 'grey',
-                HEIGHT: 15,
+                HEIGHT: 13,
             };
 
     // Width and place scale
@@ -41,6 +49,13 @@ function experience() {
             const x = d3.scaleLinear()
                 .domain(monthsDomain)
                 .range([minBar, maxBar]);
+
+    //Stacked places
+            /*const typeScale = d3.scaleBand()
+                .domain(dataset.map(d => d.type))
+                .range([0, VIZ.WIDTH])
+                .paddingInner(0)
+                .paddingOuter(0)*/
 
     //Color scale
             const types : string[] = [];

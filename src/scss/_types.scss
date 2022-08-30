@@ -2,7 +2,7 @@
   background-image: linear-gradient(to right, $color $gap, transparent $gap);
   background-position: 0 1.1em;
   background-repeat: repeat-x;
-  background-size: .3em .02em;
+  background-size: .15em .03em;
 }
 
 a {
@@ -12,15 +12,17 @@ a {
   @include line (var(--default-color), 100%);
   &:hover {
     color: var(--hover-color);
-
+    path {
+      fill: var(--hover-color);
+    }
     @include line (var(--hover-color), 100%);
   }
 }
 
 .dashed {
-  @include line (var(--default-color), 75%);
+  @include line (var(--default-color), 60%);
   &:hover {
-    @include line (var(--hover-color), 75%);
+    @include line (var(--hover-color), 60%);
   }
 }
 

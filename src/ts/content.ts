@@ -1,4 +1,4 @@
-
+import {behance} from "./images";
 /*
 Place blocks from bottom to top
 Names of visualizations can be found in visualizations.ts
@@ -25,13 +25,31 @@ const trainer : object =
         'from scratch',
     ];
 
+const ready : object =
+    [
+        'ready to',
+        ['html', '&nbsp;'],
+        'help with web-related design tasks',
+    ];
+
+const visualizer : object =
+    [
+        'Has some information organisation and',
+        ['html', '&nbsp;'],
+        'visualization ',
+        ['html', '<a href="https://www.behance.net/butuk" target="_blank">works ' + behance + '</a>'],
+    ]
+
 export const start : object =
     [
-        ['Experienced ', experience],
+        ['Experienced', experience],
+        ' ',
         ['html', '<abbr>UX/UI</abbr>'],
-        '-designer ready to',
-        ['html', '&nbsp;'],
-        'help with web-related tasks. ',
+        ' ',
+        ['designer', ready],
+        '. ',
+        ['Information visualizer', visualizer],
+        '. ',
         ['Design trainer', trainer],
-        '.',
+        '. ',
     ];
