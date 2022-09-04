@@ -46,7 +46,7 @@ export const start : object =
         ' ',
         ['html', '<abbr>UX/UI</abbr>'],
         ' ',
-        ['designer', ready],
+        'designer',
         '. ',
         ['Information visualizer', visualizer],
         '. ',

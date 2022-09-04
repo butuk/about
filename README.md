@@ -1,4 +1,3 @@
-# temp
-My design portfolio will be here soon (:
+# About
 
-https://butuk.github.io/temp2/
+https://butuk.github.io/about

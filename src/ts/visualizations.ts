@@ -27,11 +27,11 @@ function experience() {
             const THICKNESS = 10;
             const COLOR = {
                 AGENCY: 'limegreen',
-                STUDIO: 'mediumblue',
+                STUDIO: 'blue',
                 PRODUCT: 'crimson',
             };
             const TEXT  = {
-                COLOR: 'grey',
+                COLOR: 'darkgray',
                 HEIGHT: 13,
             };
 
@@ -49,13 +49,6 @@ function experience() {
             const x = d3.scaleLinear()
                 .domain(monthsDomain)
                 .range([minBar, maxBar]);
-
-    //Stacked places
-            /*const typeScale = d3.scaleBand()
-                .domain(dataset.map(d => d.type))
-                .range([0, VIZ.WIDTH])
-                .paddingInner(0)
-                .paddingOuter(0)*/
 
     //Color scale
             const types : string[] = [];

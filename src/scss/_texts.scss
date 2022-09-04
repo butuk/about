@@ -30,4 +30,7 @@ abbr {
 
 .headline, .reset {
   font-variation-settings: 'wdth' 110, 'wght' 600, 'GRAD' 50;
+  @media screen and (orientation: portrait) {
+    font-variation-settings: 'wdth' 100, 'wght' 750, 'GRAD' 50;
+  }
 }
