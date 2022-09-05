@@ -20,6 +20,9 @@
 
 body {
   font-size: 5vmax;
+  @media screen and (min-width: 1600px){
+    font-size: 3vmax;
+  }
   font-family: 'Roboto Flex', sans-serif;
   font-variation-settings: 'wght' 400, 'wdth' 100;
 }

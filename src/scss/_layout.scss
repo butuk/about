@@ -5,6 +5,9 @@
   margin-right: 25vmax;
   margin-bottom: 20vmax;
   line-height: 6vmax;
+  @media screen and (min-width: 1600px){
+    line-height: 4vmax;
+  }
   @media screen and (aspect-ratio: 1/1) {
     left: 5vmax;
     margin-right: 7vmax;
