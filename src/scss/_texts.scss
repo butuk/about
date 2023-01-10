@@ -24,7 +24,7 @@ body {
     font-size: 3vmax;
   }
   font-family: 'Roboto Flex', sans-serif;
-  font-variation-settings: 'wght' 400, 'wdth' 100;
+  font-variation-settings: 'wght' 400, 'wdth' 110;
 }
 
 abbr {
@@ -34,6 +34,6 @@ abbr {
 .headline, .reset {
   font-variation-settings: 'wdth' 110, 'wght' 600, 'GRAD' 50;
   @media screen and (orientation: portrait) {
-    font-variation-settings: 'wdth' 100, 'wght' 750, 'GRAD' 50;
+    font-variation-settings: 'wdth' 120, 'wght' 700, 'GRAD' 50;
   }
 }

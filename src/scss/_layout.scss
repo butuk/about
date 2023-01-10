@@ -9,7 +9,7 @@
     line-height: 4vmax;
   }
   @media screen and (aspect-ratio: 1/1) {
-    left: 5vmax;
+    left: 7vmax;
     margin-right: 7vmax;
     line-height: 7vmax;
   }
@@ -23,4 +23,7 @@
 .reset {
   position: relative;
   left: -.55em;
+  @media screen and (orientation: portrait) {
+    left: -.57em;
+  }
 }
