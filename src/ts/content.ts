@@ -34,10 +34,11 @@ const ready : object =
 
 const visualizer : object =
     [
-        'Has some information organisation and',
+        'Likes tables, timetables, maps, schemes, charts, scoreboards, wayfindings and other cool ways of information visual presentation with passion in finding new formats and ways of working for them. ',
         ['html', '&nbsp;'],
-        'visualization ',
-        ['html', '<a href="https://www.behance.net/butuk" target="_blank">works ' + behance + '</a>'],
+        ['html', '<a href="https://www.behance.net/butuk" target="_blank">Pet projects ' + behance + '</a>'],
+        ['html', '&nbsp;'],
+        'are meant to reflect this passion',
     ]
 
 export const start : object =
@@ -50,6 +51,6 @@ export const start : object =
         '. ',
         ['Information visualizer', visualizer],
         '. ',
-        ['Design trainer', trainer],
+        'Design trainer',
         '. ',
     ];
