@@ -34,11 +34,10 @@ const ready : object =
 
 const visualizer : object =
     [
-        'Likes tables, timetables, maps, schemes, charts, scoreboards, wayfindings and other cool ways of information visual presentation with passion in finding new formats and ways of working for them. ',
+        'Likes tables, timetables, maps, schemes, charts, scoreboards, wayfindings and other cool ways of information visual presentation with passion in finding new formats and ways of working for them. ',
+        ['html', '<a href="https://www.behance.net/butuk" target="_blank">Pet projects ' + behance + '</a>'],
         ['html', '&nbsp;'],
-        ['html', '<a href="https://www.behance.net/butuk" target="_blank">Pet projects ' + behance + '</a>'],
-        ['html', '&nbsp;'],
-        'are meant to reflect this passion',
+        'are meant to reflect this passion',
     ]
 
 export const start : object =

@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
   font-family: 'Roboto Serif';
   src: url('../fonts/RobotoSerif-VariableFont_GRAD,opsz,wdth,wght.ttf');
 }
@@ -8,7 +8,7 @@
   src: url('../fonts/RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf');
 }
 
-/*@font-face {
+@font-face {
   font-family: 'Quicksand';
   src: url('../fonts/Quicksand-VariableFont_wght.ttf');
 }
@@ -19,21 +19,23 @@
 }*/
 
 body {
-  font-size: 5vmax;
+  font-size: 4.5vmax;
   @media screen and (min-width: 1600px){
     font-size: 3vmax;
   }
-  font-family: 'Roboto Flex', sans-serif;
-  font-variation-settings: 'wght' 400, 'wdth' 110;
+  font-family: 'Helvetica', sans-serif;
+  //font-variation-settings: 'wght' 400, 'wdth' 110;
 }
 
 abbr {
-  letter-spacing: .5vmax;
+  letter-spacing: .125vmax;
 }
 
-.headline, .reset {
+.headline {
+  font-weight: bolder;
+  /*position: relative;
   font-variation-settings: 'wdth' 110, 'wght' 600, 'GRAD' 50;
   @media screen and (orientation: portrait) {
     font-variation-settings: 'wdth' 120, 'wght' 700, 'GRAD' 50;
-  }
+  }*/
 }

@@ -1,25 +1,27 @@
 import {initiateStart} from "./start";
+import {Pointer} from "./pointer";
 
 const headline = <HTMLElement>document.querySelector('.headline');
+let pointerIsShown : boolean = false;
 
 // Headline look
 export function setHeadline() {
-    if (headline.textContent ? headline.textContent.charAt(0) === '>' : null) {
-        headline.textContent = headline.textContent ? headline.textContent.slice(1, headline.textContent.length - 1) : null;
-    }
-    headline.classList.remove('reset', 'clickable');
+    const headPointer : HTMLElement = <HTMLObjectElement>document.querySelector('.pointer');
+    headPointer.remove();
+    pointerIsShown = false;
+    headline.classList.remove('clickable');
+
 }
 
 export function setReset() {
-    if (headline.textContent ? headline.textContent.charAt(0) !== '>' : null) {
-        headline.innerHTML = '>' + headline.innerHTML + '<';
-    }
-    headline.classList.add('reset', 'clickable');
+    headline.classList.add('clickable');
+    !pointerIsShown ? new Pointer : null;
+    pointerIsShown = true;
 }
 
 // Content reset
 headline.addEventListener('click', () => {
-    const place= <HTMLObjectElement>document.querySelector('.content');
+    const place = <HTMLObjectElement>document.querySelector('.content');
     place.querySelectorAll('div').forEach(element => {
         element.remove();
     });

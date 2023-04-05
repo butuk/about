@@ -1,0 +1,12 @@
+.pointer {
+  position: fixed;
+  font-weight: bolder;
+  top: 5vmax;
+  left: 7vmax;
+  @media screen and (aspect-ratio: 1/1) {
+    left: 4vmax;
+  }
+  @media screen and (orientation: portrait) {
+    left: 1vmax;
+  }
+}

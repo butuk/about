@@ -7,6 +7,7 @@ export class Block {
     constructor(content: object, place: HTMLElement | null) {
         this.content = content;
 
+
         Array.prototype.forEach.call(this.content, element => {
             const block: HTMLElement = document.createElement('div');
             block.style.display = 'inline';
@@ -15,48 +16,37 @@ export class Block {
                 block.textContent = element;
 
             } else if (typeof element === 'object') {
-                switch (element[0]) {
+                const [content, what] = element;
+                switch (content) {
                     case 'image':
                         const img: HTMLElement = document.createElement('img');
-                        img.setAttribute('src', element[1]);
+                        img.setAttribute('src', what);
                         block.appendChild(img)
                         break;
 
                     case 'html':
                         const code: HTMLElement = document.createElement('div');
                         code.style.display = 'inline';
-                        code.innerHTML = element[1];
+                        code.innerHTML = what;
                         block.appendChild(code);
                         break;
 
                     case 'd3':
                         block.setAttribute('id', 'viz');
-/*
-
-                        const container : HTMLElement = document.createElement('div');
-                        container.classList.add('svg-container');
-                        const svg : HTMLElement = document.createElement('svg');
-                        svg.classList.add('svg-content');
-                        svg.setAttribute('preserveAspectRatio', 'xMinYMin meet');
-                        block.append(container);
-                        container.append(svg);
-
-*/
                         place ? place.appendChild(block) : null;
-
-                        createViz(element[1]);
+                        createViz(what);
                         break;
 
                     //Link to new block (the first element - text of the link, second – block)
                     default:
                         const link: HTMLElement = document.createElement('a');
-                        link.textContent = element[0];
+                        link.textContent = content;
                         link.classList.add('clickable');
                         link.classList.add('dashed');
                         block.appendChild(link);
 
                         link.addEventListener('click', () => {
-                            spaceForNewBlock ? new Block(element[1], spaceForNewBlock) : null;
+                            spaceForNewBlock ? new Block(what, spaceForNewBlock) : null;
                             spaceForNewBlock ? spaceForNewBlock.removeChild(link) : null;
                             setReset();
                         })
