@@ -23,7 +23,6 @@ export class Pointer {
             if (angle && angle <= -90) {
                 angle = -90;
             };
-            console.log(angle);
             const rotation = angle ? (currentScroll > lastScroll ? angle : -angle) : null;
             pointer.style.transform = `rotate(${rotation}deg)`;
         });
