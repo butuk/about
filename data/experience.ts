@@ -69,8 +69,8 @@ export const dataset : IWorkplace[] = [
         place: 'iFuture',
         type: 'product',
         start: '2019',
-        end: 'Now',
+        end: '2023',
         enter: 155,
-        months: 41
+        months: 48
     }
 ]

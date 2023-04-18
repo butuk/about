@@ -1,5 +1,6 @@
 %text-decoration {
-  font-variation-settings: 'wght' 450, 'wdth' 95;
+  font-weight: bolder;
+  //font-variation-settings: 'wght' 450, 'wdth' 95;
 }
 
 @mixin container($width){
@@ -32,4 +33,7 @@
   color: var(--viz-color);
 }
 
+.switcher {
+  fill: #cccccc;
+}
 //padding-bottom: 100%; /* to make aspect ratio 1/1 */
