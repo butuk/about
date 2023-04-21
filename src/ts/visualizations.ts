@@ -3,6 +3,8 @@ import {dataset} from "../../data/experience";
 import {max} from 'd3';
 import {min} from 'd3';
 import {extent} from 'd3';
+import * as tip from 'd3-tip';
+console.log(typeof tip);
 
 export function createViz(functionName : any) {
     eval(functionName + '()');
@@ -20,6 +22,7 @@ function experience() {
                 BOTTOM: 0,
                 LEFT: 0,
             }
+
             const VIZ = {
                 WIDTH: (SVG.WIDTH - MARGIN.LEFT - MARGIN.RIGHT),
                 HEIGHT: (SVG.HEIGHT - MARGIN.TOP - MARGIN.BOTTOM),
@@ -98,7 +101,7 @@ function experience() {
                 .attr('y', (THICKNESS + TEXT.HEIGHT))
                 .attr('font-size', TEXT.HEIGHT)
                 .text(`${startsArr[0]}`)
-                .attr('fill', TEXT.COLOR)
+                .attr('fill', TEXT.COLOR);
 
             group.append('text')
                 .attr('x', VIZ.WIDTH)
@@ -106,7 +109,15 @@ function experience() {
                 .attr('font-size', TEXT.HEIGHT)
                 .attr('text-anchor', 'end')
                 .text(`${endsArr[endsArr.length-1]}`)
-                .attr('fill', TEXT.COLOR)
+                .attr('fill', TEXT.COLOR);
+    // Tooltip
+    /*const tooltip = tip()
+        .attr('class', 'd3-tip')
+        .offset([-10, 0])
+        .html((d: any) => {
+            return `${d.name}: ${d.value}`;
+        });*/
+
 
     // Switcher
 /*            const switcherGroup = picture.append('g')

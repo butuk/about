@@ -21,6 +21,21 @@ let configuration = {
         exclude: /node_modules/,
       },
 
+      // Babel
+      {
+        test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              ['@babel/preset-env', { targets: 'defaults' }],
+              '@babel/preset-typescript'
+            ]
+          }
+        }
+      }
+
       // Images
      /* {
         test: /\.(png|jpe?g|gif)$/i,
