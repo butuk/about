@@ -22,7 +22,7 @@ let configuration = {
       },
 
       // Babel
-      {
+      /*{
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
         use: {
@@ -34,7 +34,7 @@ let configuration = {
             ]
           }
         }
-      }
+      }*/
 
       // Images
      /* {

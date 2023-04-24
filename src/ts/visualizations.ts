@@ -4,7 +4,6 @@ import {max} from 'd3';
 import {min} from 'd3';
 import {extent} from 'd3';
 import * as tip from 'd3-tip';
-console.log(typeof tip);
 
 export function createViz(functionName : any) {
     eval(functionName + '()');
@@ -29,8 +28,11 @@ function experience() {
             };
             const THICKNESS = 10;
             const COLOR = {
+                // AGENCY: 'svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSdibGFjaycvPgogIDxwYXRoIGQ9J00tMSwxIGwyLC0yCiAgICAgICAgICAgTTAsMTAgbDEwLC0xMAogICAgICAgICAgIE05LDExIGwyLC0yJyBzdHJva2U9J3doaXRlJyBzdHJva2Utd2lkdGg9JzMnLz4KPC9zdmc+',
                 AGENCY: 'crimson',
+                // STUDIO: 'svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScgLz4KICA8Y2lyY2xlIGN4PSczLjUnIGN5PSczLjUnIHI9JzMuNScgZmlsbD0nYmxhY2snLz4KPC9zdmc+Cg==',
                 STUDIO: 'limegreen',
+                //PRODUCT: 'svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScgLz4KICA8cmVjdCB4PScwJyB5PScwJyB3aWR0aD0nMTAnIGhlaWdodD0nNycgZmlsbD0nYmxhY2snIC8+Cjwvc3ZnPg==',
                 PRODUCT: 'blue',
             };
             const TEXT  = {
@@ -84,6 +86,8 @@ function experience() {
                 .attr('height', THICKNESS)
                 .attr('y', 0)
                 .attr('fill', d => color(d.type))
+    //.attr('fill', d => console.log(`url(data:image/#${color(d.type)})`);
+
 
 
     // Years labels
