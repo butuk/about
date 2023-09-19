@@ -126,7 +126,6 @@ a:hover path {
   position: relative;
   top: 5vmax;
   left: 10vmax;
-  margin-right: 25vmax;
   margin-bottom: 20vmax;
   line-height: 6vmax;
 }
@@ -138,15 +137,27 @@ a:hover path {
 @media screen and (aspect-ratio: 1/1) {
   .container {
     left: 7vmax;
-    margin-right: 7vmax;
     line-height: 7vmax;
   }
 }
 @media screen and (orientation: portrait) {
   .container {
     left: 4vmax;
-    margin-right: 8vmax;
     line-height: 7vmax;
+  }
+}
+
+.content {
+  margin-right: 15vmax;
+}
+@media screen and (aspect-ratio: 1/1) {
+  .content {
+    margin-right: 5vmax;
+  }
+}
+@media screen and (orientation: portrait) {
+  .content {
+    margin-right: 4vmax;
   }
 }
 

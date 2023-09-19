@@ -48,8 +48,8 @@ export const start : object =
         ' ',
         'designer',
         '. ',
-        ['Information visualizer', visualizer],
-        '. ',
         'Design trainer',
+        '. ',
+        ['Information visualizer', visualizer],
         '. ',
     ];
